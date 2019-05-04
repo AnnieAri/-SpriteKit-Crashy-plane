@@ -9,25 +9,39 @@
 /* Begin PBXBuildFile section */
 		A3B12092227C2B8300BC2504 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B12091227C2B8300BC2504 /* AppDelegate.swift */; };
 		A3B12094227C2B8300BC2504 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = A3B12093227C2B8300BC2504 /* GameScene.sks */; };
-		A3B12096227C2B8300BC2504 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = A3B12095227C2B8300BC2504 /* Actions.sks */; };
 		A3B12098227C2B8300BC2504 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B12097227C2B8300BC2504 /* GameScene.swift */; };
 		A3B1209A227C2B8300BC2504 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B12099227C2B8300BC2504 /* GameViewController.swift */; };
 		A3B1209D227C2B8300BC2504 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3B1209B227C2B8300BC2504 /* Main.storyboard */; };
 		A3B1209F227C2B8500BC2504 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3B1209E227C2B8500BC2504 /* Assets.xcassets */; };
 		A3B120A2227C2B8500BC2504 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3B120A0227C2B8500BC2504 /* LaunchScreen.storyboard */; };
+		A3B120AF227C35D600BC2504 /* music.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A3B120AA227C35D600BC2504 /* music.m4a */; };
+		A3B120B0227C35D600BC2504 /* PlayerExplosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = A3B120AB227C35D600BC2504 /* PlayerExplosion.sks */; };
+		A3B120B1227C35D600BC2504 /* explosion.wav in Resources */ = {isa = PBXBuildFile; fileRef = A3B120AC227C35D600BC2504 /* explosion.wav */; };
+		A3B120B2227C35D600BC2504 /* coin.wav in Resources */ = {isa = PBXBuildFile; fileRef = A3B120AD227C35D600BC2504 /* coin.wav */; };
+		A3B120B3227C35D600BC2504 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = A3B120AE227C35D600BC2504 /* spark.png */; };
+		A3B120B6227C38D700BC2504 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B120B5227C38D700BC2504 /* R.generated.swift */; };
+		C5CE6D24B22F1B1D2056EAE3 /* Pods_CrashyPlane.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A375903492BBD8575CF436FD /* Pods_CrashyPlane.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5AC6E14793CBFB8DD2171A30 /* Pods-CrashyPlane.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrashyPlane.release.xcconfig"; path = "Pods/Target Support Files/Pods-CrashyPlane/Pods-CrashyPlane.release.xcconfig"; sourceTree = "<group>"; };
+		A375903492BBD8575CF436FD /* Pods_CrashyPlane.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CrashyPlane.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3B1208E227C2B8300BC2504 /* CrashyPlane.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrashyPlane.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3B12091227C2B8300BC2504 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3B12093227C2B8300BC2504 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		A3B12095227C2B8300BC2504 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		A3B12097227C2B8300BC2504 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		A3B12099227C2B8300BC2504 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		A3B1209C227C2B8300BC2504 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A3B1209E227C2B8500BC2504 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3B120A1227C2B8500BC2504 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A3B120A3227C2B8500BC2504 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3B120AA227C35D600BC2504 /* music.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = music.m4a; sourceTree = "<group>"; };
+		A3B120AB227C35D600BC2504 /* PlayerExplosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PlayerExplosion.sks; sourceTree = "<group>"; };
+		A3B120AC227C35D600BC2504 /* explosion.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = explosion.wav; sourceTree = "<group>"; };
+		A3B120AD227C35D600BC2504 /* coin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = coin.wav; sourceTree = "<group>"; };
+		A3B120AE227C35D600BC2504 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		A3B120B5227C38D700BC2504 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		F3567E81750E664AD194B85B /* Pods-CrashyPlane.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrashyPlane.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CrashyPlane/Pods-CrashyPlane.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +49,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5CE6D24B22F1B1D2056EAE3 /* Pods_CrashyPlane.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3CCED7A1C253866FFFB2A9EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A375903492BBD8575CF436FD /* Pods_CrashyPlane.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		97A6B1E07259603302D4EC63 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F3567E81750E664AD194B85B /* Pods-CrashyPlane.debug.xcconfig */,
+				5AC6E14793CBFB8DD2171A30 /* Pods-CrashyPlane.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A3B12085227C2B8300BC2504 = {
 			isa = PBXGroup;
 			children = (
 				A3B12090227C2B8300BC2504 /* CrashyPlane */,
 				A3B1208F227C2B8300BC2504 /* Products */,
+				97A6B1E07259603302D4EC63 /* Pods */,
+				3CCED7A1C253866FFFB2A9EA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,9 +94,10 @@
 		A3B12090227C2B8300BC2504 /* CrashyPlane */ = {
 			isa = PBXGroup;
 			children = (
+				A3B120B5227C38D700BC2504 /* R.generated.swift */,
+				A3B120A9227C357900BC2504 /* content */,
 				A3B12091227C2B8300BC2504 /* AppDelegate.swift */,
 				A3B12093227C2B8300BC2504 /* GameScene.sks */,
-				A3B12095227C2B8300BC2504 /* Actions.sks */,
 				A3B12097227C2B8300BC2504 /* GameScene.swift */,
 				A3B12099227C2B8300BC2504 /* GameViewController.swift */,
 				A3B1209B227C2B8300BC2504 /* Main.storyboard */,
@@ -73,6 +108,18 @@
 			path = CrashyPlane;
 			sourceTree = "<group>";
 		};
+		A3B120A9227C357900BC2504 /* content */ = {
+			isa = PBXGroup;
+			children = (
+				A3B120AD227C35D600BC2504 /* coin.wav */,
+				A3B120AC227C35D600BC2504 /* explosion.wav */,
+				A3B120AA227C35D600BC2504 /* music.m4a */,
+				A3B120AB227C35D600BC2504 /* PlayerExplosion.sks */,
+				A3B120AE227C35D600BC2504 /* spark.png */,
+			);
+			path = content;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -80,9 +127,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A3B120A6227C2B8500BC2504 /* Build configuration list for PBXNativeTarget "CrashyPlane" */;
 			buildPhases = (
+				0D83C8EE2D4892613C5063BC /* [CP] Check Pods Manifest.lock */,
+				A3B120B4227C37E800BC2504 /* ShellScript */,
 				A3B1208A227C2B8300BC2504 /* Sources */,
 				A3B1208B227C2B8300BC2504 /* Frameworks */,
 				A3B1208C227C2B8300BC2504 /* Resources */,
+				5E90F634B750228FA34E88DE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,15 +181,85 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3B120B0227C35D600BC2504 /* PlayerExplosion.sks in Resources */,
+				A3B120B3227C35D600BC2504 /* spark.png in Resources */,
 				A3B1209D227C2B8300BC2504 /* Main.storyboard in Resources */,
+				A3B120B1227C35D600BC2504 /* explosion.wav in Resources */,
 				A3B12094227C2B8300BC2504 /* GameScene.sks in Resources */,
 				A3B1209F227C2B8500BC2504 /* Assets.xcassets in Resources */,
+				A3B120B2227C35D600BC2504 /* coin.wav in Resources */,
+				A3B120AF227C35D600BC2504 /* music.m4a in Resources */,
 				A3B120A2227C2B8500BC2504 /* LaunchScreen.storyboard in Resources */,
-				A3B12096227C2B8300BC2504 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0D83C8EE2D4892613C5063BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CrashyPlane-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E90F634B750228FA34E88DE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CrashyPlane/Pods-CrashyPlane-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CrashyPlane/Pods-CrashyPlane-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3B120B4227C37E800BC2504 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A3B1208A227C2B8300BC2504 /* Sources */ = {
@@ -149,6 +269,7 @@
 				A3B12098227C2B8300BC2504 /* GameScene.swift in Sources */,
 				A3B1209A227C2B8300BC2504 /* GameViewController.swift in Sources */,
 				A3B12092227C2B8300BC2504 /* AppDelegate.swift in Sources */,
+				A3B120B6227C38D700BC2504 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,9 +413,11 @@
 		};
 		A3B120A7227C2B8500BC2504 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3567E81750E664AD194B85B /* Pods-CrashyPlane.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F6ZGK6PPV9;
 				INFOPLIST_FILE = CrashyPlane/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -309,9 +432,11 @@
 		};
 		A3B120A8227C2B8500BC2504 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AC6E14793CBFB8DD2171A30 /* Pods-CrashyPlane.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F6ZGK6PPV9;
 				INFOPLIST_FILE = CrashyPlane/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -15,82 +15,125 @@
 
 import SpriteKit
 import GameplayKit
+/// string valued "scoreDetect"
+let scoreDetect = "scoreDetect"
 
 class GameScene: SKScene {
     
-    private var label : SKLabelNode?
-    private var spinnyNode : SKShapeNode?
-    
+    var player: SKSpriteNode!
+    var scoreLabel: SKLabelNode!
     override func didMove(to view: SKView) {
-        
-        // Get label node from scene and store it for use later
-        self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode
-        if let label = self.label {
-            label.alpha = 0.0
-            label.run(SKAction.fadeIn(withDuration: 2.0))
-        }
-        
-        // Create shape node to use during mouse interaction
-        let w = (self.size.width + self.size.height) * 0.05
-        self.spinnyNode = SKShapeNode.init(rectOf: CGSize.init(width: w, height: w), cornerRadius: w * 0.3)
-        
-        if let spinnyNode = self.spinnyNode {
-            spinnyNode.lineWidth = 2.5
-            
-            spinnyNode.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(Double.pi), duration: 1)))
-            spinnyNode.run(SKAction.sequence([SKAction.wait(forDuration: 0.5),
-                                              SKAction.fadeOut(withDuration: 0.5),
-                                              SKAction.removeFromParent()]))
-        }
+        createPlayer()
+        createSky()
+        createBackground()
+        createGround()
+        createScore()
     }
     
     
-    func touchDown(atPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.green
-            self.addChild(n)
+    
+}
+extension GameScene {
+    
+    func createPlayer() {
+        let playerTexture = SKTexture(imageNamed: R.image.player1.name)
+        player = SKSpriteNode(texture: playerTexture)
+        player.position = CGPoint(x: frame.width / 6, y: frame.height * 0.75)
+        player.zPosition = 10
+        addChild(player)
+    }
+    
+    func createSky() {
+        ///top UIColor(hue: 0.55, saturation: 0.14, brightness: 0.97, alpha: 1)
+        ///bottom UIColor(hue: 0.55, saturation: 0.16, brightness: 0.96, alpha: 1)
+        let topSky = SKSpriteNode(color: UIColor(hue: 0.55, saturation: 0.14, brightness: 0.97, alpha: 1), size: CGSize(width: frame.width , height: 0.67 * frame.height))
+        topSky.anchorPoint = CGPoint(x: 0.5, y: 1)
+        topSky.zPosition = -40
+        topSky.position = CGPoint(x: frame.midX, y: frame.maxY)
+        
+        let bottomSky = SKSpriteNode(color: UIColor(hue: 0.55, saturation: 0.16, brightness: 0.96, alpha: 1), size: CGSize(width: frame.width , height: 0.33 * frame.height))
+        bottomSky.anchorPoint = CGPoint(x: 0.5, y: 1)
+        bottomSky.zPosition = -40
+        bottomSky.position = CGPoint(x: frame.midX, y: 0.33 * frame.height)
+        
+        addChild(topSky)
+        addChild(bottomSky)
+    }
+    
+    func createBackground() {
+        let backgroundTexture = SKTexture(imageNamed: R.image.background.name)
+        for i in 0 ... 1 {
+            let background = SKSpriteNode(texture: backgroundTexture)
+            background.zPosition = -30
+            background.anchorPoint = .zero
+            background.position = CGPoint(x: CGFloat(i) * backgroundTexture.size().width, y: 100)
+            addChild(background)
         }
     }
     
-    func touchMoved(toPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.blue
-            self.addChild(n)
+    func createGround() {
+        let groundTexture = SKTexture(imageNamed: R.image.ground.name)
+        for i in 0...1{
+            let ground = SKSpriteNode(texture: groundTexture)
+            ground.zPosition = -10
+            ground.position = CGPoint(x: (CGFloat(i) + 0.5) * groundTexture.size().width, y: groundTexture.size().height/2)
+            ground.physicsBody = SKPhysicsBody(texture: groundTexture, size: groundTexture.size())
+            ground.physicsBody?.isDynamic = false
+            addChild(ground)
         }
     }
     
-    func touchUp(atPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.red
-            self.addChild(n)
-        }
+    func createRocks() {
+        let rockTexture = SKTexture(imageNamed: R.image.rock.name)
+        let topRock = SKSpriteNode(texture: rockTexture)
+        
+        topRock.zRotation = .pi
+        topRock.xScale = -1
+        topRock.zPosition = -20
+        
+        let bottomRock = SKSpriteNode(texture: rockTexture)
+        bottomRock.zPosition = -20
+        
+        let rockCollision = SKSpriteNode(color: .red, size: CGSize(width: 32, height: frame.height))
+        rockCollision.name = scoreDetect
+        
+        addChild(topRock)
+        addChild(bottomRock)
+        addChild(rockCollision)
+        
+        let xPosition = frame.width + topRock.frame.width
+        
+        let max = CGFloat(frame.width/3)
+        let yPosition = CGFloat.random(in: -50...max)
+        
+        let rockDistance: CGFloat = 70
+        
+        topRock.position = CGPoint(x: xPosition, y: yPosition + topRock.size.height + rockDistance)
+        bottomRock.position = CGPoint(x: xPosition, y: yPosition - rockDistance)
+        rockCollision.position = CGPoint(x: xPosition + rockCollision.size.width * 2, y: frame.midY)
+    }
+    
+    func createScore() {
+        scoreLabel = SKLabelNode(fontNamed: "Optima-ExtraBlack")
+        scoreLabel.fontSize = 24
+        
+        scoreLabel.position = CGPoint(x: frame.midX, y: frame.maxY - 60)
+        scoreLabel.text = "SCORE: 0"
+        scoreLabel.fontColor = UIColor.black
+        
+        addChild(scoreLabel)
+    }
+    
+    func createLogo() {
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let label = self.label {
-            label.run(SKAction.init(named: "Pulse")!, withKey: "fadeInOut")
-        }
         
-        for t in touches { self.touchDown(atPoint: t.location(in: self)) }
     }
-    
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchMoved(toPoint: t.location(in: self)) }
-    }
-    
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchUp(atPoint: t.location(in: self)) }
-    }
-    
-    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchUp(atPoint: t.location(in: self)) }
-    }
-    
     
     override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
+        
     }
+    
 }
